@@ -1,0 +1,5 @@
+@media mediatype and (max-width:10000000px) {
+    html {
+        background-color: red;
+    }
+  }
