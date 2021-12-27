@@ -3,6 +3,7 @@
 <head>
 	<title>Dogs doing things</title>
 	<link rel="stylesheet" href="CSS/one_page_website.css">
+	<script src="JS/one_page_website.js" defer></script>
 </head>
 <body>
 
@@ -25,14 +26,78 @@
 	<div id="pictures">
 	<div class="container">
 	<h1>Pictures of Dogs Doing Things</h1>
-		<div>
-			<div>
-				<img src="./Images/Dogpoker.jpg" alt="Dogs playing poker">
+		<div class= "row">
+			<div class="column">
+				<img src="Images/Dogpoker.jpg" onclick="openModal();currentSlide(1)" 
+				class="hover-shadow" alt="Dogs playing poker">
 			</div>
+			<div class="column">
+				<img src="Images/Dogsatthebar.jpg" onclick="openModal();currentSlide(2)" 
+				class="hover-shadow" alt="Dogs hanging at the bar">
 			</div>
-			<div>
-					<img src="./Images/Dogsatthebar.jpg" alt="Dogs hanging at the bar">
+			<div class="column">
+				<img src="Images/DogTV.jpg" onclick="openModal();currentSlide(3)" 
+				class="hover-shadow" alt="Dog watching Tv">
 			</div>
+			<div class="column">
+				<img src="Images/DogKitchen.jpg" onclick="openModal();currentSlide(4)" 
+				class="hover-shadow" alt="Dog in the kitchen">
+			</div>
+		</div>
+			
+	
+	
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+			<div class="mySlides">
+				<div class="numbertext"> 1 / 4 </div>
+				<img src="Images/Dogpoker.jpg" style="width:100%">	
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">2 / 4</div>
+				<img src="Images/Dogsatthebar.jpg" style="width: 100%;">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">3 / 4</div>
+				<img src="Images/DogTV.jpg" style="width: 100%;">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">4 / 4</div>
+				<img src="Images/DogKitchen.jpg" style="width: 100%;">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+			<div class="column">
+				<img class="demo cursor" src="Images/Dogpoker.jpg" style="width:100%;" 
+				onclick="currentSlide(1)" alt="Dogs playing poker">
+			</div>
+
+			<div class="column">
+				<img class="demo cursor" src="Images/Dogsatthebar.jpg" style= "width:100%;" 
+				onclick="currentSlide(2)" alt="Dogs at the bar">
+			</div>
+
+			<div class="column">
+				<img class="demo cursor" src="Images/DogTV.jpg" style = "width:100%;" 
+				onclick="currentSlide(3)" alt="Dog watching Tv">
+			</div>
+
+			<div class="column">
+				<img class="demo cursor" src="Images/DogKitchen.jpg" style="width: 100%;" 
+				onclick="currentSlide(4)" alt="Dog in the kitchen">
+			</div>
+		</div>
+	</div>
 	</div>
 	</div>
 </section>
@@ -82,5 +147,6 @@
 	<p>Author: Amanda Kutz</p>
 	<p><a href="mailto:amanda.m.kutz@gmail.com">amanda.m.kutz@gmail.com</a></p>
 </footer>
+
 </body>
 </html>
